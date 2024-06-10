@@ -1,0 +1,30 @@
+#!/bin/bash
+
+read -p "Enter first side of triangle: " x
+
+read -p "Enter second side of triangle: " y
+
+read -p "Enter third sidd of triangle: " z
+
+
+if [ $x -eq $y ] && [ $y -eq $z ]
+
+then
+
+echo "Triangle is equilateral"
+
+elif [ $x -eq $y ] || [ $y -eq $z ] || [ $z -eq $x ]
+
+then
+
+echo "Triangle is isosceles"
+
+else
+
+echo "Triangle is scalene"
+
+else
+
+echo "Error: sides do not form a triangle"
+
+fi

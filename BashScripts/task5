@@ -1,0 +1,17 @@
+#!/bin/bash
+
+read -p "Enter a Username: " username
+
+connected=$(whoami)
+
+if [ "$username" = "$connected" ]
+
+then
+
+echo "The username you entered matches the connected user."
+
+else
+
+echo "Nope. The username you entered does NOT match the connected user."
+
+fi

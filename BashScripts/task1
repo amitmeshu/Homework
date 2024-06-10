@@ -1,0 +1,13 @@
+#!/bin/bash
+
+read -p "Enter a number between 1-10: " num
+
+if [[ "$num" -gt 10 || "$num" -lt 1 ]]; then
+
+echo "Error."
+
+else
+
+echo "$num to the power of 2 is $((num**2))"
+
+fi

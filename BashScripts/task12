@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "whats the java file you want to compile, run and store output for?"
+
+read filename
+
+javac "$filename" 
+
+java "$filename" >> output.txt 2>> runtime_errors.txt

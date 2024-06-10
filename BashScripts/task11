@@ -1,0 +1,43 @@
+#!/bin/bash
+
+echo "Please enter a file name: "
+
+read filename
+
+if [ -f "$filename" ];
+
+then
+
+backup_filename="${filename}_$(date +%Y%m%d).back"
+
+if [ -f "$backup_filename" ];
+
+then
+
+echo "The backup file $backup_filename rleady exists."
+echo "Do you want to replace it? (y/n)"
+
+read replace
+
+
+if [ "$replace" != "y" ];
+
+then
+
+echo "Exiting without replacing the backup file."
+
+exit 0
+
+fi
+
+fi
+
+cp "$filename" "$backup_filename"
+
+echo "The file has been backed up to $backup_filename."
+
+else
+
+echo "The file $filename does not exists."
+
+fi

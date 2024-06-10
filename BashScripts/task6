@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Do you wish to print the CPU info? y/n?"
+
+read answer
+
+if [ "$answer" == "y" ]
+
+then lshw
+
+else echo "fine mate. not gonna do nothing for ya."
+
+fi

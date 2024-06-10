@@ -1,0 +1,30 @@
+#!/bash/bin
+
+echo "Enter two numbers to see math operations: "
+
+read num1
+
+read num2
+
+echo "Calculating..."; sleep 1
+
+echo "Ummmmm..."; sleep 1
+
+echo " Ok I got this!"; sleep 1
+
+sum=$((num1 + num2))
+echo "Sum of $num1 and $num2 is $sum."
+
+sub=$((num1 - num2))
+echo "Subtraction of $num2 from $num1 is $sub."
+
+mul=$((num1 * num2))
+echo "Multiplication of $num1 and $num2 is $mul."
+
+if [ $num2 -ne 0 ]; then
+div=$(echo "scale=2; $num1 / $num2" | bc)
+echo "Division of $num1 by $num2 is $div."
+else
+echo "Error. Can't divide by 0 you outlaw"
+
+fi

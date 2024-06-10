@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Yes or No?"
+
+read answer
+
+if [ "$answer" = "Yes" ] || [ "$answer" = "y" ] || [ "$answer" = "yes" ]
+then
+    echo "YES"
+elif [ "$answer" = "No" ] || [ "$answer" = "no" ] || [ "$answer" = "n" ]
+then
+    echo "NOPE"
+
+else echo "Invaild input :( "
+
+fi
