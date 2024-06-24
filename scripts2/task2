@@ -1,0 +1,21 @@
+#!/bin/bash
+
+days="Sunday Monday Thuesday Wednesday Thursday Friday Saturday"
+
+IFS=" " read -ra week <<< "$days"
+
+for ((i = 0; i < ${#week[@]}; i++)) do
+
+	echo -n "Weekday $((i+1)): ${week[i]}"
+	
+	if [[ ${week[i]} -gt 5 ]]; then
+	
+	echo " (Weekday)"
+	
+	else
+	
+	echo " (Weekend)"
+	
+	fi 
+	
+done
