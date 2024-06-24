@@ -5,11 +5,10 @@ dir="${1:-.}"
 count=1
 
 for item in "$dir"/*; do
-	
+
 	if [ -f "$item" ]; then
 	
-		echo "item $count : $(basename "$item")"
-		echo " "
+		echo "Item $count : $(basename "$item")"
 		
 		((count++))
 		

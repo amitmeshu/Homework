@@ -1,0 +1,17 @@
+#!/bin/bash
+
+declare -a random
+
+for ((i = 0; i < 20; i++)); do
+
+	random[$i]=$((RANDOM % 30))
+	
+done
+
+echo "rand nums are: "
+
+for nums in "${random[@]}"; do
+
+	echo "$nums"
+	
+done
